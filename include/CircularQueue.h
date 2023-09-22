@@ -15,7 +15,7 @@ class CircularQueue {
 public:
     // TODO implement the following functions in ../src/CircularQueue.cpp
     explicit CircularQueue(int capacity);
-    CircularQueue(): capacity(0), frontIndex(0), rearIndex(0), currentSize(0) {};
+    CircularQueue();;
     bool isEmpty() const;
     bool isFull() const;
     size_t size() const;
@@ -31,6 +31,7 @@ private:
     size_t rearIndex;
     size_t currentSize;
 };
+
 
 #include "../src/CircularQueue.cpp"
 
