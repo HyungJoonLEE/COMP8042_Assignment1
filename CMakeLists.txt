@@ -9,7 +9,7 @@ add_executable(8042_Assignment_1
         include/LExceptions.h
         include/Stack.h
         include/CircularQueue.h
-#        src/BookReservation.cpp
+        src/BookReservation.cpp
         tests/TestEnvironment.h
         tests/StackTests.h
         tests/CircularQueueTests.h
