@@ -52,30 +52,47 @@ void Stack<T>::push(const T &element) {
 /**
  * Removes the top element from the stack.
  *
- * Removes the element at the top of the stack if it's not empty.
- * Reducing the stack's size by one.
+ * Removes the element at the top of the stack, reducing the stack's size by one.
+ * If the stack is empty, no elements will be popped and throw the exception.
  */
 template<typename T>
 void Stack<T>::pop() {
-    buffer.pop_back();
-    currentSize--;
+    if (!isEmpty()) {
+        buffer.pop_back();
+        currentSize--;
+    }
+    else throw std::out_of_range("Stack is empty");
 }
 
 
 /**
- * Returns the top element of the stack.
+ * Returns a reference to the top element of the stack.
  *
- * Retrieves the element at the top of the stack without removing it if it's not empt..
+ * Retrieves a reference to the element at the top of the stack without removing it.
+ * If the stack is empty, no elements will be returned and throw the exception.
  *
  * @return A reference to the top element of the stack.
  */
 template<typename T>
 T &Stack<T>::top() {
-    return buffer.back();
+    if (!isEmpty())
+        return buffer.back();
+    else throw std::out_of_range("Stack is empty");
 }
 
+
+/**
+ * Returns a constant reference to the top element of the stack.
+ *
+ * Retrieves a constant reference to the element at the top of the stack without removing it.
+ * If the stack is empty, no elements will be returned and throw the exception.
+ *
+ * @return A constant reference to the top element of the stack.
+ */
 template<typename T>
 const T &Stack<T>::top() const {
-    return buffer.back();
+    if (!isEmpty())
+        return buffer.back();
+    else throw std::out_of_range("Stack is empty");
 }
 
