@@ -61,7 +61,7 @@ void BookReservationManagementSystem::enqueueReservation(const Patron &patron, c
 
 /**
  * Enqueue a reference of the reservation record into the pending reservations queue.
- * If the queue is already at its capacity (i.e., has reached `maxPendingReservations`),
+ * If the queue is already at its capacity (i.e., has reached 'maxPendingReservations'),
  * the reservation will not be added, and print out the message
  *
  * @param reservation The ReservationRecord object to be added to pending reservations.
@@ -77,12 +77,12 @@ void BookReservationManagementSystem::enqueueReservation(const ReservationRecord
 
 
 /**
- * Processes the next reservation from the pendingReservations queue.
+ * Processes the next reservation from the 'pendingReservations' queue.
  *
  * Attempts to fulfill the next reservation in the queue by searching for
- * the requested book in the `booksDB` database. If the book is found and has available copies,
+ * the requested book in the 'booksDB' database. If the book is found and has available copies,
  * the reservation is fulfilled, the book's copy count is decremented, and the reservation
- * is moved to the `fulfilledReservations` queue.
+ * is moved to the 'fulfilledReservations' queue.
  *
  * If the book is unavailable, the reservation is moved to the end of the 'pendingReservations' queue
  * and the next reservation is then processed. This continues until a reservation is fulfilled or all
