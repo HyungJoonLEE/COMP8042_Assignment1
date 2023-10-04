@@ -126,7 +126,8 @@ template<typename T>
 T &CircularQueue<T>::front() {
     if (!isEmpty())
         return buffer.at(frontIndex);
-    else buffer.at(0);
+    else
+        return buffer.at(0);
 }
 
 
@@ -144,7 +145,8 @@ template<typename T>
 const T &CircularQueue<T>::front() const {
     if (!isEmpty())
         return buffer.at(frontIndex);
-    else buffer.at(0);
+    else
+        return buffer.at(0);
 }
 
 
