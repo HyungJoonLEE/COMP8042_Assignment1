@@ -22,16 +22,18 @@ CircularQueue<T>::CircularQueue(int capacity) {
 
 
 /**
+ * @Feedback:The default constructor for CircularQueue() is not necessary to redefine, and causes the program to crash.
+ *
  * Default constructor for the CircularQueue.
  *
  * Initializes an empty CircularQueue with a capacity of 0.
  * Both the 'frontIndex' and 'rearIndex' are set to 0, and the 'currentSize' (number of elements in the queue)
  * is also initialized to 0. The underlying storage, 'buffer', is initialized as an empty std::vector of type T.
  */
-template<typename T>
-CircularQueue<T>::CircularQueue(): capacity(0), frontIndex(0), rearIndex(0), currentSize(0) {
-    buffer = std::vector<T>();
-}
+//template<typename T>
+//CircularQueue<T>::CircularQueue(): capacity(0), frontIndex(0), rearIndex(0), currentSize(0) {
+//    buffer = std::vector<T>();
+//}
 
 
 /**

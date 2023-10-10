@@ -15,7 +15,7 @@ class CircularQueue {
 public:
     // TODO implement the following functions in ../src/CircularQueue.cpp
     explicit CircularQueue(int capacity);
-    CircularQueue();;
+    CircularQueue();
     bool isEmpty() const;
     bool isFull() const;
     size_t size() const;
